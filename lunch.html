@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<!-- 
+		Author: Krista Allgood
+		Date: 12.02.2017
+		Cabbage Head Cafe
+	-->
+	<meta charset="utf-8">
+	<title>Lunch: Cabbage Head Cafe</title>
+	<link rel="stylesheet" type="text/css" href="style/main.css">
+	<link href="https://fonts.googleapis.com/css?family=Dosis%7CKreon" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+	<body>
+		<header>
+		<nav id="menu" tabindex="0">
+			<span id="bar1" class="bar"></span>
+			<span id="bar2" class="bar"></span>
+			<span id="bar3" class="bar"></span>
+			<ul class="navigation" id="navigation">
+				<li class="burgerlink"><a href="index.html">Home</a></li>
+				<li class="burgerlink"><a href="lunch.html">Lunch</a></li>
+				<li class="burgerlink"><a href="dinner.html">Dinner</a></li>
+				<li class="burgerlink"><a href="drinks.html">Drinks</a></li>
+				<li class="burgerlink"><a href="events.html">Events</a></li>
+				<li class="burgerlink"><a href="contact.html">Contact</a></li>
+			</ul>
+		</nav>
+		<div class="menu-bg" id="menu-bg"></div>
+			<h1><a href="index.html">Cabbage Head Cafe</a></h1>
+			<p>Eat well, live well.</p>
+		</header>
+		<main>
+			<div class="maindiv">
+				<div class="menubtns">
+				<input class="btn" type="button" value="Soup &amp; Salad" onclick="soupSaladMenu()">
+				<input class="btn" type="button" value="Sandwiches" onclick="sandwichMenu()">
+				<input class="btn" type="button" value="Pizza" onclick="pizzaMenu()">
+				<h1 id="menuTitle">Soup and Salad</h1>
+				</div>
+				
+				<div class="row">
+				<img src="images/lunch/soupSalad/beef.jpg" width="100" height="100" id="rightImg1" alt="Beef and noodle stew">
+				<div class="col">
+				<h3 id="rightH1">Beef Noodle Stew $7.99</h3>
+				<p id="rightP1">Rich and savory. Served with bread.</p>
+				</div>
+				</div>
+
+				<div class="row">
+				<img src="images/lunch/soupSalad/tomato.jpg" width="100" height="100" id="rightImg2" alt="Tomato bisque">
+				<div class="col">
+				<h3 id="rightH2">Tomato Bisque $5.99</h3>
+				<p id="rightP2">Topped with herbs and served with bread.</p>
+				</div>
+				</div>
+
+				<div class="row">
+				<img src="images/lunch/soupSalad/zucchini.jpg" width="100" height="100" id="rightImg3" alt="Zucchini soup">
+				<div class="col">
+				<h3 id="rightH3">Zucchini Soup $7.99</h3>
+				<p id="rightP3">Zucchini with herbs in a tangy cream sauce.</p>
+				</div>
+				</div>
+
+				<div class="row">
+				<img src="images/lunch/soupSalad/salad.jpg" width="100" height="100" id="leftImg1" alt="House salad">
+				<div class="col">
+				<h3 id="leftH1">House Salad $7.99</h3>
+				<p id="leftP1">Italian, Ranch or Cesar dressing.</p>
+				</div>
+				</div>
+
+				<div class="row">
+				<img src="images/lunch/soupSalad/chickensalad.jpg" width="100" height="100" id="leftImg2" alt="Chicken salad">
+				<div class="col">
+				<h3 id="leftH2">Chicken Cesar $7.99</h3>
+				<p id="leftP2">Grilled chicken with Parmesan cheese and Cesar dressing.</p>
+				</div>
+				</div>
+
+				<div class="row">
+				<img src="images/lunch/soupSalad/potatoavacado.jpg" width="100" height="100" id="leftImg3" alt="Potato avocado salad">
+				<div class="col">
+				<h3 id="leftH3">Avocado Salad $7.99</h3>
+				<p id="leftP3">Fresh greens, roasted potato and avocado.</p>
+				</div>
+				</div>
+			</div>
+		</main>
+		<footer>
+			<nav>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="lunch.html">Lunch</a></li>
+				<li><a href="dinner.html">Dinner</a></li>
+				<li><a href="drinks.html">Drinks</a></li>
+				<li><a href="events.html">Events</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+			</nav>
+			<p>(555) 555-5555</p>
+			<p><a href="mailto:contact@cabbagehead.com">contact@cabbagehead.com</a></p>
+			<p>123 Cabbage Blvd Knoxville, TN 37920</p>
+		</footer>
+		<script src=scripts/menu.js></script>
+	</body>
+</html>
