@@ -9,94 +9,60 @@
 	-->
 	<meta charset="utf-8">
 	<title>Contact: Cabbage Head Cafe</title>
-	<link rel="stylesheet" type="text/css" href="mainstyles.css">
+	<link rel="stylesheet" type="text/css" href="style/main.css">
 	<link href="https://fonts.googleapis.com/css?family=Dosis%7CKreon" rel="stylesheet">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<style>
-
-	main {
-		margin-top: 1%;
-	}
-
-	.map {
-		width: 500px;
-		height: 340px;
-		margin-right: 2%;
-		margin-bottom: 2%;
-		border: 2px solid #000000;
-		background-color: rgba(255,255,255,.60);
-		float: left;
-	}
-
-	p {
-		line-height: 1.5em;
-	}
-
-	p a.directions {
-		color: red;
-		border-bottom: 4px double #000000;
-	}
-
-	p a.directions:hover {
-		color: green;
-		border-bottom: 4px double #000000;
-	}
-
-
-	</style>
 	</head>
 
 	<body>
 		<header>
+		<nav id="menu" tabindex="0">
+			<span id="bar1" class="bar"></span>
+			<span id="bar2" class="bar"></span>
+			<span id="bar3" class="bar"></span>
+			<ul class="navigation" id="navigation">
+				<li class="burgerlink"><a href="index.html">Home</a></li>
+				<li class="burgerlink"><a href="lunch.html">Lunch</a></li>
+				<li class="burgerlink"><a href="dinner.html">Dinner</a></li>
+				<li class="burgerlink"><a href="drinks.html">Drinks</a></li>
+				<li class="burgerlink"><a href="events.html">Events</a></li>
+				<li class="burgerlink"><a href="contact.html">Contact</a></li>
+			</ul>
+		</nav>
+		<div class="menu-bg" id="menu-bg"></div>
 			<h1><a href="index.html">Cabbage Head Cafe</a></h1>
 			<p>Eat well, live well.</p>
 		</header>
-		<nav>
-			<ul>
-				<li><a href="index.html">Home</a></li>
-				<li><a href="about.html">About</a></li>
-				<li><a href="specials.html">Specials</a></li>
-				<li><a href="lunch.html">Lunch</a></li>
-				<li><a href="dinner.html">Dinner</a></li>
-				<li><a href="drinks.html">Drinks</a></li>
-				<li><a href="events.html">Events</a></li>
-				<li><a href="local.html">Local Sources</a></li>
-				<li><a href="signup.html">Perform</a></li>
-				<li><a href="contact.html">Contact</a></li>
-			</ul>
-		</nav>
-		<main>
-		<div class="map">
-			<img src="images/map.png" alt="Map" width=500 height=340 usemap="#directions">
-			<map name="directions"><area href="https://www.mapquest.com/directions" alt="Get directions" target="_blank" shape="poly" coords="50,108,57,124,73,124,61,135,64,150,49,143,36,150,38,135,27,124,43,122,49,113">
-			</map>
-		</div>
-			<p ><a href="https://www.mapquest.com/directions" class="directions">Get Directions</a></p>
-			<h1 class="contact">Questions or comments? We'd love to hear them.</h1>
-			<p class="contact"><a href="mailto:contact@cabbagehead.com">contact@cabbagehead.com</a><br />(555) 555-5555<br />123 Downtown Blvd Knoxville, TN 37920<br />We are open:<br />Monday-Saturday 9AM-11PM<br />Sunday 9AM-10PM</p>
-		</main>
-		<div class="clear"></div>
-		<footer>
-			<div class="footernav">
-			<ul>
-				<li><a href="index.html">Home</a></li>
-				<li><a href="about.html">About</a></li>
-				<li><a href="specials.html">Specials</a></li>
-				<li><a href="lunch.html">Lunch</a></li>
-				<li><a href="dinner.html">Dinner</a></li>
-				<li><a href="drinks.html">Drinks</a></li>
-			</ul>
-			<ul>
-				<li><a href="events.html">Events</a></li>
-				<li><a href="local.html">Local Sources</a></li>
-				<li><a href="signup.html">Perform</a></li>
-				<li><a href="contact.html">Contact</a></li>
-			</ul>
-			</div>
+		<main class="maindiv">
 			<div class="contact">
-			<p>(555) 555-5555 <a href="mailto:contact@cabbagehead.com">contact@cabbagehead.com</a></p>
-			<p>123 Downtown Blvd Knoxville, TN 37920 &copy; 2017</p>
-			</div>
+			<h2>Contact</h2>
+			<p>&#40;555&#41; 555&#8208;5555</p>
+			<p><a href="mailto:contact@cabbagehead.com">contact@cabbagehead.com</a></p>
+			<h2>Location</h2>
+			<p>123 Cabbage Blvd Knoxville, TN 37920</p>
+			<h2>Hours</h2>
+			<ul class="hours">
+				<li><span class="bold">Monday</span>&#58; 8AM&#8208;9PM</li>
+				<li><span class="bold">Tuesday</span>&#58; 8AM&#8208;9PM</li>
+				<li><span class="bold">Wednesday</span>&#58; 8AM&#8208;9PM</li>
+				<li><span class="bold">Thursday</span>&#58; 8AM&#8208;9PM</li>
+				<li><span class="bold">Friday</span>&#58; 8AM&#8208;10PM</li>
+				<li><span class="bold">Saturday</span>&#58; 9AM&#8208;10PM</li>
+				<li><span class="bold">Sunday</span>&#58; 9AM&#8208;9PM</li>
+			</ul>
+		</main>
+		<footer>
+			<nav>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="lunch.html">Lunch</a></li>
+				<li><a href="dinner.html">Dinner</a></li>
+				<li><a href="drinks.html">Drinks</a></li>
+				<li><a href="events.html">Events</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+			</nav>
 		</footer>
+		<script src="scripts/hamburger.js"></script>
 	</body>
 </html>

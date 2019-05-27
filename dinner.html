@@ -8,343 +8,104 @@
 	-->
 	<meta charset="utf-8">
 	<title>Dinner: Cabbage Head Cafe</title>
-	<link rel="stylesheet" type="text/css" href="mainstyles.css">
+	<link rel="stylesheet" type="text/css" href="style/main.css">
 	<link href="https://fonts.googleapis.com/css?family=Dosis%7CKreon" rel="stylesheet">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<style>
-
-	.menu {
-		margin-top: 5%;
-		margin-bottom: 2%;
-		border: 1.5px solid #000000;
-		background-color: rgba(188,207,203,.4);
-		padding-left: 1em;
-		padding-right: 1em;
-		font-size: .9em;
-		overflow: hidden;
-	}
-
-	.menu li {
-		display: block;
-	}
-
-	.leftcol {
-		max-width: 50%;
-	}
-
-	.rightcol {
-		max-width: 50%;
-		float: right;
-	}
-
-	img {
-		clear: left;
-		margin: 2% 2% 2% 0;
-		border: 1px solid grey;
-	}
-
-	#leftImg1, #leftImg2, #leftImg3 {
-		float: left;
-	}
-
-	#leftH1, #leftH2, #leftH3, #leftP1, #leftP2, #leftP3 {
-		width: 60%;
-		margin-top: 2%;
-		float: left;
-	}
-
-	#rightImg1, #rightImg2, #rightImg3 {
-		float: left;
-		clear: both;
-	}
-
-	#rightH1, #rightH2, #rightH3, #rightP1, #rightP2, #rightP3 {
-		width: 60%;
-		margin-top: 2%;
-		float: left;
-	}
-
-	.menubuttondiv {
-		width: 100%;
-		text-align: center;
-		border-bottom: 6px double #000000;
-		overflow: hidden;
-		margin-top: .5em;
-	}
-
-	#menuTitle {
-		padding-top: .5em;
-	}
-
-	.leftbtn, .leftbtn:hover {
-		background: url(images/menubuttons/pasta.jpg);
-	}
-
-	.middlebtn, .middlebtn:hover {
-		background: url(images/menubuttons/chickenrice.jpg);
-	}
-
-	.rightbtn, .rightbtn:hover {
-		background: url(images/menubuttons/beef.jpg);
-	}
-
-	input {
-		width: 30%;
-		padding: 1.5em 0;
-		font-weight: bold;
-		font-size: .8em;
-		background-color: #72DA5E;
-		background-image: -webkit-linear-gradient(top, #72DA5E, #2F5E05);
- 		background-image: -moz-linear-gradient(top, #72DA5E, #2F5E05);
- 		background-image: -ms-linear-gradient(top, #72DA5E, #2F5E05);
- 		background-image: -o-linear-gradient(top, #72DA5E, #2F5E05);
- 		background-image: linear-gradient(to bottom, #72DA5E, #2F5E05);
- 		-webkit-box-shadow: #9D9E9E 0 4px 4px;
-		-moz-box-shadow: #9D9E9E 0 4px 4px; 
-		box-shadow: #9D9E9E 0 4px 4px;
-	}
-
-	input:hover {
-		background-color: #85FF6E;
-		background-image: -webkit-linear-gradient(top, #85FF6E, #437F37);
- 		background-image: -moz-linear-gradient(top, #85FF6E, #437F37);
- 		background-image: -ms-linear-gradient(top, #85FF6E, #437F37);
- 		background-image: -o-linear-gradient(top, #85FF6E, #437F37);
- 		background-image: linear-gradient(to bottom, #85FF6E, #437F37);
- 		border-bottom: 3px solid #000000;
-	}
-
-	</style>
 	</head>
 
 	<body>
 		<header>
+		<nav id="menu" tabindex="0">
+			<span id="bar1" class="bar"></span>
+			<span id="bar2" class="bar"></span>
+			<span id="bar3" class="bar"></span>
+			<ul class="navigation" id="navigation">
+				<li class="burgerlink"><a href="index.html">Home</a></li>
+				<li class="burgerlink"><a href="lunch.html">Lunch</a></li>
+				<li class="burgerlink"><a href="dinner.html">Dinner</a></li>
+				<li class="burgerlink"><a href="drinks.html">Drinks</a></li>
+				<li class="burgerlink"><a href="events.html">Events</a></li>
+				<li class="burgerlink"><a href="contact.html">Contact</a></li>
+			</ul>
+		</nav>
+		<div class="menu-bg" id="menu-bg"></div>
 			<h1><a href="index.html">Cabbage Head Cafe</a></h1>
 			<p>Eat well, live well.</p>
 		</header>
-		<nav>
-			<ul>
-				<li><a href="index.html">Home</a></li>
-				<li><a href="about.html">About</a></li>
-				<li><a href="specials.html">Specials</a></li>
-				<li><a href="lunch.html">Lunch</a></li>
-				<li><a href="dinner.html">Dinner</a></li>
-				<li><a href="drinks.html">Drinks</a></li>
-				<li><a href="events.html">Events</a></li>
-				<li><a href="local.html">Local Sources</a></li>
-				<li><a href="signup.html">Perform</a></li>
-				<li><a href="contact.html">Contact</a></li>
-			</ul>
-		</nav>
 		<main>
-			<div class="menu">
-				<div class="menubuttondiv">
-				<input type="button" value="Pasta &amp; Quiche" class="leftbtn" onclick="pastaQuicheMenu()">
-				<input type="button" value="Seafood &amp; Chicken" class="middlebtn" onclick="seafoodChickenMenu()">
-				<input type="button" value="Pork &amp; Beef" class="rightbtn" onclick="porkBeefMenu()">
-				<h1 id="menuTitle">Dinner: Pasta and Quiche</h1>
+			<div class="maindiv">
+				<div class="menubtns">
+				<input class="btn" type="button" value="Pasta &amp; Quiche" onclick="pastaQuicheMenu()">
+				<input class="btn" type="button" value="Chicken &amp; Sea" onclick="seafoodChickenMenu()">
+				<input class="btn" type="button" value="Pork &amp; Beef" onclick="porkBeefMenu()">
+				<h1 id="menuTitle">Pasta and Quiche</h1>
 				</div>
 	
-				<div class="rightcol">
-				<div>
+				<div class="item">
 				<img src="images/dinner/pastaquiche/loadedvegpasta.jpg" width="100" height="100" id="rightImg1" alt="Cheesy pasta loaded with veggies">
-				<h2 id="rightH1">Loaded Veggie Pasta $7.99</h2>
+				<div class="col">
+				<h3 id="rightH1">Loaded Veggie Pasta $7.99</h3>
 				<p id="rightP1">Cheesy pasta loaded with veggies.</p>
 				</div>
+				</div>
 
+				<div class="item">
 				<img src="images/dinner/pastaquiche/pesto.jpg" width="100" height="100" id="rightImg2" alt="Pesto pasta">
-				<h2 id="rightH2">Pesto Pasta $7.99</h2>
+				<div class="col">
+				<h3 id="rightH2">Pesto Pasta $7.99</h3>
 				<p id="rightP2">Perfectly coated with oil, garlic and herbs. Served with bread.</p>
+				</div>
+				</div>
 
+				<div class="item">
 				<img src="images/dinner/pastaquiche/redpenne.jpg" width="100" height="100" id="rightImg3" alt="Spicy tomato penne">
-				<h2 id="rightH3">Spicy Tomato Penne $7.99</h2>
+				<div class="col">
+				<h3 id="rightH3">Spicy Tomato Penne $7.99</h3>
 				<p id="rightP3">Penne pasta smothered in our house-made spicy tomato sauce. Served with bread.</p>
-				</div><!--end right column-->
+				</div>
+				</div>
 
-				<div class="leftcol">
+				<div class="item">
 				<img src="images/dinner/pastaquiche/spinachquinoa.jpg" width="100" height="100" id="leftImg1" alt="Spinach quinoa quiche">
-				<h2 id="leftH1">Spinach Quinoa Quiche $8.99</h2>
+				<div class="col">
+				<h3 id="leftH1">Spinach Quinoa Quiche $8.99</h3>
 				<p id="leftP1">Plenty of fresh spinach and quinoa.</p>
+				</div>
+				</div>
 
+				<div class="item">
 				<img src="images/dinner/pastaquiche/spinachredpepper.jpg" width="100" height="100" id="leftImg2" alt="Red pepper quiche">
-				<h2 id="leftH2">Red Pepper Quiche $8.99</h2>
+				<div class="col">
+				<h3 id="leftH2">Red Pepper Quiche $8.99</h3>
 				<p id="leftP2">A savory blend of red peppers and fresh spinach.</p>
+				</div>
+				</div>
 
+				<div class="item">
 				<img src="images/dinner/pastaquiche/tomatobasil.jpg" width="100" height="100" id="leftImg3" alt="Tomato basil quiche">
-				<h2 id="leftH3">Tomato Basil Quiche $7.99</h2>
+				<div class="col">
+				<h3 id="leftH3">Tomato Basil Quiche $7.99</h3>
 				<p id="leftP3">Sweet basil and juicy vine tomatoes.</p>
 				</div>
-			</div><!--end menu-->
+				</div>
+			</div>
 		</main>
-		<footer class="clear">
-			<div class="footernav">
+		<footer>
+			<nav>
 			<ul>
 				<li><a href="index.html">Home</a></li>
-				<li><a href="about.html">About</a></li>
-				<li><a href="specials.html">Specials</a></li>
 				<li><a href="lunch.html">Lunch</a></li>
 				<li><a href="dinner.html">Dinner</a></li>
 				<li><a href="drinks.html">Drinks</a></li>
-			</ul>
-			<ul>
 				<li><a href="events.html">Events</a></li>
-				<li><a href="local.html">Local Sources</a></li>
-				<li><a href="signup.html">Perform</a></li>
 				<li><a href="contact.html">Contact</a></li>
 			</ul>
-			</div>
-			<div class="contact">
-			<p>(555) 555-5555 <a href="mailto:contact@cabbagehead.com">contact@cabbagehead.com</a></p>
-			<p>123 Downtown Blvd Knoxville, TN 37920 &copy; 2017</p>
-			</div>
+			</nav>
+			<p>(555) 555-5555</p>
+			<p><a href="mailto:contact@cabbagehead.com">contact@cabbagehead.com</a></p>
+			<p>123 Cabbage Blvd Knoxville, TN 37920</p>
 		</footer>
-<script>
-//Items are listed from top of the right column, down. Then left column down.
-
-/*Pasta and quiche
-----------------------------------------------*/
-var pastaQuicheItem = [ "Loaded Veggie Pasta $7.99", "Pesto Pasta $7.99", "Spicy Tomato Penne $7.99","Spinach Quinoa Quiche $8.99", "Red Pepper Quiche $8.99", "Tomato Basil Quiche $7.99"];
-var pastaQuicheDescription = ["Cheesy pasta loaded with veggies.", "Perfectly coated with oil, garlic and herbs. Served with bread.", "Penne pasta smothered in our house-made spicy tomato sauce. Served with bread.", "Plenty of fresh spinach and quinoa.", "A savory blend of red peppers and fresh spinach.", "Sweet basil and juicy vine tomatoes."];
-var pastaQuicheImg = ["loadedvegpasta.jpg","pesto.jpg","redpenne.jpg","spinachquinoa.jpg","spinachredpepper.jpg","tomatobasil.jpg"];
-var pastaQuicheAlt = ["Cheesy pasta loaded with veggies", "Pesto pasta", "Spicy tomato penne", "Spinach quinoa quiche", "Red pepper quiche", "Tomato basil quiche"];
-
-/*Seafood and chicken
-----------------------------------------------*/
-var seafoodChickenItem = ["Garlic Shrimp $8.99", "Crabcake $9.99", "Grilled Salmon $9.99", "Lemon Herb Chicken $7.99", "Pan Seared Chicken $7.99", "Chicken Tenders $7.99"];
-var seafoodChickenDescription = ["Pan fried shrimp, seasoned with butter and garlic.", "Meaty and savory crabcake served over mixed veggies.", "Drizzled with olive oil and herbs. Served with lemon wedge.", "Chicken breast with zesty lemon and herbs. Served with tender broccoli and rice.", "Pan seared chicken in pan gravy. Served with mashed potatoes.", "Crunchy and juicy. Served with fries."];
-var seafoodChickenImg = ["garlicshrimp.jpg", "crabcake.jpg", "salmon.jpg", "chickenbroccoli.jpg", "chickenpotato.jpg", "friedchicken.jpg"];
-var seafoodChickenAlt = ["Garlic shrimp", "Crabcake", "Grilled salmon", "Lemon herb chicken", "Pan seared chicken", "Chicken tenders"];
-
-/*Pork and beef
-----------------------------------------------*/
-var porkBeefItem = ["Steak Kebabs $9.99", "Burger and Fries $8.99", "Sirloin $9.99", "Spicy Pork Bowl $7.99", "Grilled Mango Porkchop $8.99", "Fried Porkchop $7.99"];
-var porkBeefDescription = ["Grilled kebabs with tender sirloin, onions, pineapple and roasted red peppers. Served with rice.","Tomato, lettuce, red onions, mayo and ketchup. Add cheese (.50). Comes with crispy fries.","Tender and topped with our mushroom pan sauce. Served with mashed potatoes","Spicy pork, rice, fresh veggies and cheese wontons.","Grilled porkchop topped with our house-made mango sauce.","Juicy fried porkchop. Served with veggies and rice."];
-var porkBeefImg = ["kebab.jpg", "burger.jpg", "sirloin.jpg", "porkbowl.jpg", "porkchop.jpg", "friedpork.jpg"];
-var porkBeefAlt = ["Steak kebabs", "Burger and fries", "Sirloin", "Spicy pork bowl", "Grilled mango porkchop", "Fried porkchop"];
-
-var menuTitle = document.getElementById("menuTitle");
-
-var rightH1 = document.getElementById("rightH1");
-var rightH2 = document.getElementById("rightH2");
-var rightH3 = document.getElementById("rightH3");
-var rightP1 = document.getElementById("rightP1");
-var rightP2 = document.getElementById("rightP2");
-var rightP3 = document.getElementById("rightP3");
-var rightImg1 = document.getElementById("rightImg1");
-var rightImg2 = document.getElementById("rightImg2");
-var rightImg3 = document.getElementById("rightImg3");
-
-var leftH1 = document.getElementById("leftH1");
-var leftH2 = document.getElementById("leftH2");
-var leftH3 = document.getElementById("leftH3");
-var leftP1 = document.getElementById("leftP1");
-var leftP2 = document.getElementById("leftP2");
-var leftP3 = document.getElementById("leftP3");
-var leftImg1 = document.getElementById("leftImg1");
-var leftImg2 = document.getElementById("leftImg2");
-var leftImg3 = document.getElementById("leftImg3");
-
-function pastaQuicheMenu() {
-	rightH1.innerHTML = pastaQuicheItem[0];
-	rightP1.innerHTML = pastaQuicheDescription[0];
-	rightImg1.src = "images/dinner/pastaquiche/" +pastaQuicheImg[0];
-	rightImg1.alt = pastaQuicheAlt[0];
-
-	rightH2.innerHTML = pastaQuicheItem[1];
-	rightP2.innerHTML = pastaQuicheDescription[1];
-	rightImg2.src = "images/dinner/pastaquiche/" +pastaQuicheImg[1];
-	rightImg2.alt = pastaQuicheAlt[1];
-
-	rightH3.innerHTML = pastaQuicheItem[2];
-	rightP3.innerHTML = pastaQuicheDescription[2];
-	rightImg3.src = "images/dinner/pastaquiche/" +pastaQuicheImg[2];
-	rightImg3.alt = pastaQuicheAlt[2];
-
-	leftH1.innerHTML = pastaQuicheItem[3];
-	leftP1.innerHTML = pastaQuicheDescription[3];
-	leftImg1.src = "images/dinner/pastaquiche/" +pastaQuicheImg[3];
-	leftImg1.alt = pastaQuicheAlt[3];
-
-	leftH2.innerHTML = pastaQuicheItem[4];
-	leftP2.innerHTML = pastaQuicheDescription[4];
-	leftImg2.src = "images/dinner/pastaquiche/" +pastaQuicheImg[4];
-	leftImg2.alt = pastaQuicheAlt[4];
-
-	leftH3.innerHTML = pastaQuicheItem[5];
-	leftP3.innerHTML = pastaQuicheDescription[5];	
-	leftImg3.src = "images/dinner/pastaquiche/" +pastaQuicheImg[5];
-	leftImg3.alt = pastaQuicheAlt[5];
-
-	menuTitle.innerHTML = "Dinner: Pasta and Quiche";
-}
-
-function seafoodChickenMenu() {
-	rightH1.innerHTML = seafoodChickenItem[0];
-	rightP1.innerHTML = seafoodChickenDescription[0];
-	rightImg1.src = "images/dinner/seafoodchicken/" +seafoodChickenImg[0];
-	rightImg1.alt = seafoodChickenAlt[0];
-
-	rightH2.innerHTML = seafoodChickenItem[1];
-	rightP2.innerHTML = seafoodChickenDescription[1];
-	rightImg2.src = "images/dinner/seafoodchicken/" +seafoodChickenImg[1];
-	rightImg2.alt = seafoodChickenAlt[1];
-
-	rightH3.innerHTML = seafoodChickenItem[2];
-	rightP3.innerHTML = seafoodChickenDescription[2];
-	rightImg3.src = "images/dinner/seafoodchicken/" +seafoodChickenImg[2];
-	rightImg3.alt = seafoodChickenAlt[2];
-
-	leftH1.innerHTML = seafoodChickenItem[3];
-	leftP1.innerHTML = seafoodChickenDescription[3];
-	leftImg1.src = "images/dinner/seafoodchicken/" +seafoodChickenImg[3];
-	leftImg1.alt = seafoodChickenAlt[3];
-
-	leftH2.innerHTML = seafoodChickenItem[4];
-	leftP2.innerHTML = seafoodChickenDescription[4];
-	leftImg2.src = "images/dinner/seafoodchicken/" +seafoodChickenImg[4];
-	leftImg2.alt = seafoodChickenAlt[4];
-	
-	leftH3.innerHTML = seafoodChickenItem[5];
-	leftP3.innerHTML = seafoodChickenDescription[5];	
-	leftImg3.src = "images/dinner/seafoodchicken/" +seafoodChickenImg[5];
-	leftImg3.alt = seafoodChickenAlt[5];
-
-	menuTitle.innerHTML = "Dinner: Seafood and Chicken";
-}
-
-function porkBeefMenu() {
-	rightH1.innerHTML = porkBeefItem[0];
-	rightP1.innerHTML = porkBeefDescription[0];
-	rightImg1.src = "images/dinner/porkbeef/" +porkBeefImg[0];
-	rightImg1.alt = porkBeefAlt[0];
-
-	rightH2.innerHTML = porkBeefItem[1];
-	rightP2.innerHTML = porkBeefDescription[1];
-	rightImg2.src = "images/dinner/porkbeef/" +porkBeefImg[1];
-	rightImg2.alt = porkBeefAlt[1];
-
-	rightH3.innerHTML = porkBeefItem[2];
-	rightP3.innerHTML = porkBeefDescription[2];
-	rightImg3.src = "images/dinner/porkbeef/" +porkBeefImg[2];
-	rightImg3.alt = porkBeefAlt[2];
-
-	leftH1.innerHTML = porkBeefItem[3];
-	leftP1.innerHTML = porkBeefDescription[3];
-	leftImg1.src = "images/dinner/porkbeef/" +porkBeefImg[3];
-	leftImg1.alt = porkBeefAlt[3];
-
-	leftH2.innerHTML = porkBeefItem[4];
-	leftP2.innerHTML = porkBeefDescription[4];
-	leftImg2.src = "images/dinner/porkbeef/" +porkBeefImg[4];
-	leftImg2.alt = porkBeefAlt[4];
-
-	leftH3.innerHTML = porkBeefItem[5];
-	leftP3.innerHTML = porkBeefDescription[5];	
-	leftImg3.src = "images/dinner/porkbeef/" +porkBeefImg[5];
-	leftImg3.alt = porkBeefAlt[5];
-
-	menuTitle.innerHTML = "Dinner: Pork and Beef";
-}
-</script>
+		<script src="scripts/hamburger.js"></script>
+		<script src=scripts/menu.js></script>
 	</body>
 </html>

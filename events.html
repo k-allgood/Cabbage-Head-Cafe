@@ -9,134 +9,74 @@
 	-->
 	<meta charset="utf-8">
 	<title>Events: Cabbage Head Cafe</title>
-	<link rel="stylesheet" type="text/css" href="mainstyles.css">
+	<link rel="stylesheet" type="text/css" href="style/main.css">
 	<link href="https://fonts.googleapis.com/css?family=Dosis%7CKreon" rel="stylesheet">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<style>
-	
-	.events {
-		margin-top: 5%;
-		margin-bottom: 2%;
-		padding-left: 1em;
-		padding-right: 1em;
-		border: 1.5px solid #000000;
-		background-color: rgba(188,207,203,.4);
-		font-size: .9em;
-		text-align: center;
-	}
-
-	.events img {
-		margin-top: .5em;
-		border: 1px solid grey;
-	}
-
-	.currentDate {
-		color: #3E425E;
-		font-weight: bold;
-	}
-
-	.events h1 {
-		width: 100%;
-		margin: 1% auto;
-		border-bottom: 6px double #000000;
-	}
-
-	h2 {
-		margin-top: 1%;
-		margin-bottom: 1%;
-		text-decoration: underline;
-		font-size: .9em;
-	}
-
-	.events li {
-		display: block;
-		padding-bottom: 1%;
-		font-size: .8em;
-	}
-
-	</style>
 	</head>
-
 	<body>
 		<header>
+		<nav id="menu" tabindex="0">
+			<span id="bar1" class="bar"></span>
+			<span id="bar2" class="bar"></span>
+			<span id="bar3" class="bar"></span>
+			<ul class="navigation" id="navigation">
+				<li class="burgerlink"><a href="index.html">Home</a></li>
+				<li class="burgerlink"><a href="lunch.html">Lunch</a></li>
+				<li class="burgerlink"><a href="dinner.html">Dinner</a></li>
+				<li class="burgerlink"><a href="drinks.html">Drinks</a></li>
+				<li class="burgerlink"><a href="events.html">Events</a></li>
+				<li class="burgerlink"><a href="contact.html">Contact</a></li>
+			</ul>
+		</nav>
+		<div class="menu-bg" id="menu-bg"></div>
 			<h1><a href="index.html">Cabbage Head Cafe</a></h1>
 			<p>Eat well, live well.</p>
 		</header>
-		<nav>
-			<ul>
-				<li><a href="index.html">Home</a></li>
-				<li><a href="about.html">About</a></li>
-				<li><a href="specials.html">Specials</a></li>
-				<li><a href="lunch.html">Lunch</a></li>
-				<li><a href="dinner.html">Dinner</a></li>
-				<li><a href="drinks.html">Drinks</a></li>
-				<li><a href="events.html">Events</a></li>
-				<li><a href="local.html">Local Sources</a></li>
-				<li><a href="signup.html">Perform</a></li>
-				<li><a href="contact.html">Contact</a></li>
-			</ul>
-		</nav>
 		<main>
-			<div class="events">
-					<img src="images/eventpics.jpg" width="800" height="125" alt="Event pics">
+			<div class="maindiv">
+				<div class="eventdiv centertxt">
+				<img src="images/eventpics_sm.jpg" alt="Event pics">
 				<h1>Events</h1>
 				<p>Wednesday from 12-4pm: Stand-up/Poetry Slams.<br />
 					Friday &amp; Saturday from 6-10pm: Live Music.</p>
-				<p class="currentDate" id="currentDate"></p>
-				<h2>Friday, December 1st</h2>
+				<p class="currentdate" id="currentDate"></p>
+				<h2>Friday, June 1st</h2>
 				<ul>
 					<li>Live music featuring: Smokestack</li>
 				</ul>
-				<h2>Saturday, December 2nd</h2>
+				<h2>Saturday, June 2nd</h2>
 				<ul>
 					<li>Live music featuring: Cat's Meow</li>
 				</ul>
-				<h2>Wednesday, December 6th</h2>
+				<h2>Wednesday, June 6th</h2>
 				<ul>
 					<li>Stand-up comedian: Lisa Chiles</li>
 					<li>Stand-up comedian: Matt Newark</li>
 					<li>Poetry enthusiast: Trevon Rogers</li>
 				</ul>
-				<h2>Friday, December 8th</h2>
+				<h2>Friday, June 8th</h2>
 				<ul>
 					<li>Live music featuring: Chickpea Wannabe</li>
 				</ul>
+				</div>
 			</div>
 		</main>
-		<div class="clear"></div>
 		<footer>
-			<div class="footernav">
+			<nav>
 			<ul>
 				<li><a href="index.html">Home</a></li>
-				<li><a href="about.html">About</a></li>
-				<li><a href="specials.html">Specials</a></li>
 				<li><a href="lunch.html">Lunch</a></li>
 				<li><a href="dinner.html">Dinner</a></li>
 				<li><a href="drinks.html">Drinks</a></li>
-			</ul>
-			<ul>
 				<li><a href="events.html">Events</a></li>
-				<li><a href="local.html">Local Sources</a></li>
-				<li><a href="signup.html">Perform</a></li>
 				<li><a href="contact.html">Contact</a></li>
 			</ul>
-			</div>
-			<div class="contact">
-			<p>(555) 555-5555 <a href="mailto:contact@cabbagehead.com">contact@cabbagehead.com</a></p>
-			<p>123 Downtown Blvd Knoxville, TN 37920 &copy; 2017</p>
-			</div>
+			</nav>
+			<p>(555) 555-5555</p>
+			<p><a href="mailto:contact@cabbagehead.com">contact@cabbagehead.com</a></p>
+			<p>123 Cabbage Blvd Knoxville, TN 37920</p>
 		</footer>
-		<script>
-		window.onload = function () { 
-
-		var today = new Date();
-		var day = today.getDate();
-		var month = today.getMonth()+1;
-		var year = today.getFullYear();
-
-		today = month + "." + day + "." + year;
-		document.getElementById("currentDate").innerHTML = "Today is " + today;
-		}
-		</script>
+		<script src="scripts/hamburger.js"></script>
+		<script src="scripts/events.js"></script>
 	</body>
 </html>

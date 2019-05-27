@@ -8,343 +8,103 @@
 	-->
 	<meta charset="utf-8">
 	<title>Drinks: Cabbage Head Cafe</title>
-	<link rel="stylesheet" type="text/css" href="mainstyles.css">
+	<link rel="stylesheet" type="text/css" href="style/main.css">
 	<link href="https://fonts.googleapis.com/css?family=Dosis%7CKreon" rel="stylesheet">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<style>
-
-	.menu {
-		margin-top: 5%;
-		margin-bottom: 2%;
-		border: 1.5px solid #000000;
-		background-color: rgba(188,207,203,.4);
-		padding-left: 1em;
-		padding-right: 1em;
-		font-size: .9em;
-		overflow: hidden;
-	}
-
-	.menu li {
-		display: block;
-	}
-
-	.leftcol {
-		max-width: 50%;
-	}
-
-	.rightcol {
-		max-width: 50%;
-		float: right;
-	}
-
-	img {
-		clear: left;
-		margin: 2% 2% 2% 0;
-		border: 1px solid grey;
-	}
-
-	#leftImg1, #leftImg2, #leftImg3 {
-		float: left;
-	}
-
-	#leftH1, #leftH2, #leftH3, #leftP1, #leftP2, #leftP3 {
-		width: 60%;
-		margin-top: 2%;
-		float: left;
-	}
-
-	#rightImg1, #rightImg2, #rightImg3 {
-		float: left;
-		clear: both;
-	}
-
-	#rightH1, #rightH2, #rightH3, #rightP1, #rightP2, #rightP3 {
-		width: 60%;
-		margin-top: 2%;
-		float: left;
-	}
-
-	.menubuttondiv {
-		width: 100%;
-		text-align: center;
-		border-bottom: 6px double #000000;
-		overflow: hidden;
-		margin-top: .5em;
-	}
-
-	#menuTitle {
-		padding-top: .5em;
-	}
-
-	.leftbtn, .leftbtn:hover {
-		background: url(images/menubuttons/coffee.jpg);
-	}
-
-	.middlebtn, .middlebtn:hover {
-		background: url(images/menubuttons/tea.jpg);
-	}
-
-	.rightbtn, .rightbtn:hover {
-		background: url(images/menubuttons/cocktails.jpg);
-	}
-
-	input {
-		width: 30%;
-		padding: 1.5em 0;
-		font-weight: bold;
-		font-size: .8em;
-		background-color: #72DA5E;
-		background-image: -webkit-linear-gradient(top, #72DA5E, #2F5E05);
- 		background-image: -moz-linear-gradient(top, #72DA5E, #2F5E05);
- 		background-image: -ms-linear-gradient(top, #72DA5E, #2F5E05);
- 		background-image: -o-linear-gradient(top, #72DA5E, #2F5E05);
- 		background-image: linear-gradient(to bottom, #72DA5E, #2F5E05);
- 		-webkit-box-shadow: #9D9E9E 0 4px 4px;
-		-moz-box-shadow: #9D9E9E 0 4px 4px; 
-		box-shadow: #9D9E9E 0 4px 4px;
-	}
-
-	input:hover {
-		background-color: #85FF6E;
-		background-image: -webkit-linear-gradient(top, #85FF6E, #437F37);
- 		background-image: -moz-linear-gradient(top, #85FF6E, #437F37);
- 		background-image: -ms-linear-gradient(top, #85FF6E, #437F37);
- 		background-image: -o-linear-gradient(top, #85FF6E, #437F37);
- 		background-image: linear-gradient(to bottom, #85FF6E, #437F37);
- 		border-bottom: 3px solid #000000;
-	}
-
-	</style>
 	</head>
-
 	<body>
 		<header>
+		<nav id="menu" tabindex="0">
+			<span id="bar1" class="bar"></span>
+			<span id="bar2" class="bar"></span>
+			<span id="bar3" class="bar"></span>
+			<ul class="navigation" id="navigation">
+				<li class="burgerlink"><a href="index.html">Home</a></li>
+				<li class="burgerlink"><a href="lunch.html">Lunch</a></li>
+				<li class="burgerlink"><a href="dinner.html">Dinner</a></li>
+				<li class="burgerlink"><a href="drinks.html">Drinks</a></li>
+				<li class="burgerlink"><a href="events.html">Events</a></li>
+				<li class="burgerlink"><a href="contact.html">Contact</a></li>
+			</ul>
+		</nav>
+		<div class="menu-bg" id="menu-bg"></div>
 			<h1><a href="index.html">Cabbage Head Cafe</a></h1>
 			<p>Eat well, live well.</p>
 		</header>
-		<nav>
-			<ul>
-				<li><a href="index.html">Home</a></li>
-				<li><a href="about.html">About</a></li>
-				<li><a href="specials.html">Specials</a></li>
-				<li><a href="lunch.html">Lunch</a></li>
-				<li><a href="dinner.html">Dinner</a></li>
-				<li><a href="drinks.html">Drinks</a></li>
-				<li><a href="events.html">Events</a></li>
-				<li><a href="local.html">Local Sources</a></li>
-				<li><a href="signup.html">Perform</a></li>
-				<li><a href="contact.html">Contact</a></li>
-			</ul>
-		</nav>
 		<main>
-			<div class="menu">
-				<div class="menubuttondiv">
-				<input type="button" value="Coffee" class="leftbtn" onclick="coffeeMenu()">
-				<input type="button" value="Tea" class="middlebtn" onclick="teaMenu()">
-				<input type="button" value="Cocktails" class="rightbtn" onclick="cocktailsMenu()">
-				<h1 id="menuTitle">Drinks: Coffee</h1>
+			<div class="maindiv">
+				<div class="menubtns">
+				<input class="btn" type="button" value="Coffee" onclick="coffeeMenu()">
+				<input class="btn" type="button" value="Tea" onclick="teaMenu()">
+				<input class="btn" type="button" value="Cocktails" onclick="cocktailsMenu()">
+				<h1 id="menuTitle">Coffee</h1>
 				</div>
 	
-				<div class="rightcol">
-				<div>
+				<div class="item">
 				<img src="images/drinks/coffee/espresso.jpg" width="100" height="100" id="rightImg1" alt="Espresso">
-				<h2 id="rightH1">Espresso $2.99</h2>
+				<div class="col">
+				<h3 id="rightH1">Espresso $2.99</h3>
 				<p id="rightP1">A double shot of espresso.</p>
 				</div>
-
+				</div>
+				
+				<div class="item">
 				<img src="images/drinks/coffee/macchiato.jpg" width="100" height="100" id="rightImg2" alt="Macchiato">
-				<h2 id="rightH2">Macchiato $3.99</h2>
+				<div class="col">
+				<h3 id="rightH2">Macchiato $3.99</h3>
 				<p id="rightP2">A creamy espresso drink. Add caramel (.50).</p>
+				</div>
+				</div>
 
+				<div class="item">
 				<img src="images/drinks/coffee/latte.jpg" width="100" height="100" id="rightImg3" alt="Latte">
-				<h2 id="rightH3">Latte $3.99</h2>
+				<div class="col">
+				<h3 id="rightH3">Latte $3.99</h3>
 				<p id="rightP3">Espresso with steamed milk and a little foam.</p>
-				</div><!--end right column-->
+				</div>
+				</div>
 
-				<div class="leftcol">
+				<div class="item">
 				<img src="images/drinks/coffee/regular.jpg" width="100" height="100" id="leftImg1" alt="Endless coffee.">
-				<h2 id="leftH1">Endless Coffee $4.99</h2>
+				<div class="col">
+				<h3 id="leftH1">Endless Coffee $4.99</h3>
 				<p id="leftP1">An endless supply of coffee. Light roast, dark roast or decaf.</p>
+				</div>
+				</div>
 
+				<div class="item">
 				<img src="images/drinks/coffee/mocha.jpg" width="100" height="100" id="leftImg2" alt="Mocha">
-				<h2 id="leftH2">Mocha $4.99</h2>
+				<div class="col">
+				<h3 id="leftH2">Mocha $4.99</h3>
 				<p id="leftP2">Bold and smooth with cocoa.</p>
+				</div>
+				</div>
 
+				<div class="item">
 				<img src="images/drinks/coffee/cappucino.jpg" width="100" height="100" id="leftImg3" alt="Cappuccino">
-				<h2 id="leftH3">Cappuccino $3.99</h2>
+				<div class="col">
+				<h3 id="leftH3">Cappuccino $3.99</h3>
 				<p id="leftP3">Strong espresso with foamed and steamed milk.</p>
 				</div>
-			</div><!--end menu-->
+				</div>
+			</div>
 		</main>
-		<footer class="clear">
-			<div class="footernav">
+		<footer>
+			<nav>
 			<ul>
 				<li><a href="index.html">Home</a></li>
-				<li><a href="about.html">About</a></li>
-				<li><a href="specials.html">Specials</a></li>
 				<li><a href="lunch.html">Lunch</a></li>
 				<li><a href="dinner.html">Dinner</a></li>
 				<li><a href="drinks.html">Drinks</a></li>
-			</ul>
-			<ul>
 				<li><a href="events.html">Events</a></li>
-				<li><a href="local.html">Local Sources</a></li>
-				<li><a href="signup.html">Perform</a></li>
 				<li><a href="contact.html">Contact</a></li>
 			</ul>
-			</div>
-			<div class="contact">
-			<p>(555) 555-5555 <a href="mailto:contact@cabbagehead.com">contact@cabbagehead.com</a></p>
-			<p>123 Downtown Blvd Knoxville, TN 37920 &copy; 2017</p>
-			</div>
+			</nav>
+			<p>(555) 555-5555</p>
+			<p><a href="mailto:contact@cabbagehead.com">contact@cabbagehead.com</a></p>
+			<p>123 Cabbage Blvd Knoxville, TN 37920</p>
 		</footer>
-<script>
-//Items are listed from top of the right column, down. Then left column down.
-
-/*Coffee
-----------------------------------------------*/
-var coffeeItem = ["Espresso $2.99","Macchiato $3.99","Latte $3.99","Endless Coffee $4.99","Mocha $4.99","Cappuccino $3.99"];
-var coffeeDescription = ["A double shot of espresso.","A creamy espresso drink. Add caramel (.50).","Espresso with steamed milk and a little foam.","An endless supply of coffee. Light roast, dark roast or decaf.","Bold and smooth with cocoa.","Strong espresso with foamed and steamed milk."];
-var coffeeImg = ["espresso.jpg","macchiato.jpg","latte.jpg","regular.jpg","mocha.jpg","cappucino.jpg"];
-var coffeeAlt = ["Espresso","Macchiato","Latte","Endless coffee","Mocha","Cappuccino"];
-
-/*Tea
-----------------------------------------------*/
-var teaItem = ["Cranberry Tea $3.99","Ginger Tea $2.99","Herbal Tea $2.99","Lemon Tea $2.99","Matcha $3.99","Orange Tea $3.99"];
-var teaDescription = ["Slightly tart and sweet.","Refreshing ginger tea.","Balanced and soothing herbal tea blend.","Black tea leaves brewed with lemon.","Refreshing green tea.","Black tea leaves brewed with oranges. Served with an orange blossom."];
-var teaImg = ["cranberrytea.jpg","gingertea.jpg","herbaltea.jpg","lemontea.jpg","matcha.jpg","orangetea.jpg"];
-var teaAlt = ["Cranberry tea","Ginger tea","Herbal tea","Lemon tea","Matcha","Orange tea"];
-
-/*Cocktails
-----------------------------------------------*/
-var cocktailsItem = ["Beer $3.99","Wine $3.99","Bloody Mary $4.99","Citrus Punch $4.99","Mojito $3.99","Orange Mimosa $4.99"];
-var cocktailsDescription = ["Choose a glass of lager, ale or IPA.","A glass of red or white wine.","Delicious and spicy bloody mary.","Pineapple and orange juice mixed with punch packing vodka.","Minty, light and refreshing.","Our orange mimosa is perfect with any meal."];
-var cocktailsImg = ["beer.jpg","wine.jpg","bmary.jpg","citrus.jpg","mojito.jpg","orange.jpg"];
-var cocktailsAlt = ["Lager, ale or IPA","Red or white wine","Bloody mary","Citrus punch with vodka","Mojito","Orange mimosa"];
-
-var menuTitle = document.getElementById("menuTitle");
-
-var rightH1 = document.getElementById("rightH1");
-var rightH2 = document.getElementById("rightH2");
-var rightH3 = document.getElementById("rightH3");
-var rightP1 = document.getElementById("rightP1");
-var rightP2 = document.getElementById("rightP2");
-var rightP3 = document.getElementById("rightP3");
-var rightImg1 = document.getElementById("rightImg1");
-var rightImg2 = document.getElementById("rightImg2");
-var rightImg3 = document.getElementById("rightImg3");
-
-var leftH1 = document.getElementById("leftH1");
-var leftH2 = document.getElementById("leftH2");
-var leftH3 = document.getElementById("leftH3");
-var leftP1 = document.getElementById("leftP1");
-var leftP2 = document.getElementById("leftP2");
-var leftP3 = document.getElementById("leftP3");
-var leftImg1 = document.getElementById("leftImg1");
-var leftImg2 = document.getElementById("leftImg2");
-var leftImg3 = document.getElementById("leftImg3");
-
-function coffeeMenu() {
-	rightH1.innerHTML = coffeeItem[0];
-	rightP1.innerHTML = coffeeDescription[0];
-	rightImg1.src = "images/drinks/coffee/" +coffeeImg[0];
-	rightImg1.alt = coffeeAlt[0];
-
-	rightH2.innerHTML = coffeeItem[1];
-	rightP2.innerHTML = coffeeDescription[1];
-	rightImg2.src = "images/drinks/coffee/" +coffeeImg[1];
-	rightImg2.alt = coffeeAlt[1];
-
-	rightH3.innerHTML = coffeeItem[2];
-	rightP3.innerHTML = coffeeDescription[2];
-	rightImg3.src = "images/drinks/coffee/" +coffeeImg[2];
-	rightImg3.alt = coffeeAlt[2];
-
-	leftH1.innerHTML = coffeeItem[3];
-	leftP1.innerHTML = coffeeDescription[3];
-	leftImg1.src = "images/drinks/coffee/" +coffeeImg[3];
-	leftImg1.alt = coffeeAlt[3];
-
-	leftH2.innerHTML = coffeeItem[4];
-	leftP2.innerHTML = coffeeDescription[4];
-	leftImg2.src = "images/drinks/coffee/" +coffeeImg[4];
-	leftImg2.alt = coffeeAlt[4];
-
-	leftH3.innerHTML = coffeeItem[5];
-	leftP3.innerHTML = coffeeDescription[5];	
-	leftImg3.src = "images/drinks/coffee/" +coffeeImg[5];
-	leftImg3.alt = coffeeAlt[5];
-
-	menuTitle.innerHTML = "Drinks: Coffee";
-}
-
-function teaMenu() {
-	rightH1.innerHTML = teaItem[0];
-	rightP1.innerHTML = teaDescription[0];
-	rightImg1.src = "images/drinks/tea/" +teaImg[0];
-	rightImg1.alt = teaAlt[0];
-
-	rightH2.innerHTML = teaItem[1];
-	rightP2.innerHTML = teaDescription[1];
-	rightImg2.src = "images/drinks/tea/" +teaImg[1];
-	rightImg2.alt = teaAlt[1];
-
-	rightH3.innerHTML = teaItem[2];
-	rightP3.innerHTML = teaDescription[2];
-	rightImg3.src = "images/drinks/tea/" +teaImg[2];
-	rightImg3.alt = teaAlt[2];
-
-	leftH1.innerHTML = teaItem[3];
-	leftP1.innerHTML = teaDescription[3];
-	leftImg1.src = "images/drinks/tea/" +teaImg[3];
-	leftImg1.alt = teaAlt[3];
-
-	leftH2.innerHTML = teaItem[4];
-	leftP2.innerHTML = teaDescription[4];
-	leftImg2.src = "images/drinks/tea/" +teaImg[4];
-	leftImg2.alt = teaAlt[4];
-	
-	leftH3.innerHTML = teaItem[5];
-	leftP3.innerHTML = teaDescription[5];	
-	leftImg3.src = "images/drinks/tea/" +teaImg[5];
-	leftImg3.alt = teaAlt[5];
-
-	menuTitle.innerHTML = "Drinks: Tea";
-}
-
-function cocktailsMenu() {
-	rightH1.innerHTML = cocktailsItem[0];
-	rightP1.innerHTML = cocktailsDescription[0];
-	rightImg1.src = "images/drinks/cocktails/" +cocktailsImg[0];
-	rightImg1.alt = cocktailsAlt[0];
-
-	rightH2.innerHTML = cocktailsItem[1];
-	rightP2.innerHTML = cocktailsDescription[1];
-	rightImg2.src = "images/drinks/cocktails/" +cocktailsImg[1];
-	rightImg2.alt = cocktailsAlt[1];
-
-	rightH3.innerHTML = cocktailsItem[2];
-	rightP3.innerHTML = cocktailsDescription[2];
-	rightImg3.src = "images/drinks/cocktails/" +cocktailsImg[2];
-	rightImg3.alt = cocktailsAlt[2];
-
-	leftH1.innerHTML = cocktailsItem[3];
-	leftP1.innerHTML = cocktailsDescription[3];
-	leftImg1.src = "images/drinks/cocktails/" +cocktailsImg[3];
-	leftImg1.alt = cocktailsAlt[3];
-
-	leftH2.innerHTML = cocktailsItem[4];
-	leftP2.innerHTML = cocktailsDescription[4];
-	leftImg2.src = "images/drinks/cocktails/" +cocktailsImg[4];
-	leftImg2.alt = cocktailsAlt[4];
-
-	leftH3.innerHTML = cocktailsItem[5];
-	leftP3.innerHTML = cocktailsDescription[5];	
-	leftImg3.src = "images/drinks/cocktails/" +cocktailsImg[5];
-	leftImg3.alt = cocktailsAlt[5];
-
-	menuTitle.innerHTML = "Drinks: Cocktails";
-}
-</script>
+		<script src="scripts/hamburger.js"></script>
+		<script src=scripts/menu.js></script>
 	</body>
 </html>
