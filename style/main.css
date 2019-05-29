@@ -188,6 +188,7 @@ main {
 
 .eventdiv {
 	background-color: rgba(188,207,203,.4);
+	font-size: 1.1em;
 }
 
 .eventdiv p {
@@ -308,13 +309,18 @@ footer a {
 }
 
 footer a:hover {
-	color: #2B2533;
-	border-bottom: 2px groove #2B2533;
+	color: #F1F1F1;
+	border-bottom: 2px solid #2B2533;
 }
 /******************************
 Media Queries
 ******************************/
 @media screen and (min-width: 600px) {
+
+body {
+	background: url(../images/tablet_background.jpg) no-repeat center center fixed;
+	background-size: cover;
+}
 
 main {
 	padding-bottom: 0;
@@ -322,13 +328,29 @@ main {
 	background-color: rgba(241, 241, 241, 0.7);
 }
 
+header {
+	width: 100%;
+	max-height: 200px;
+	background-color: rgba(93,127,71,.7);
+	border-bottom: 2px solid #5B6355;
+	margin-bottom: 5%;
+}
+
+header h1 {
+  	margin-top: 10%;
+  	margin-right: 0;
+}
+
+header h1 a:hover {
+	color: #F1F1F1;
+}
+
 footer {
 	width: 100%;
-	align-self: center;
 }
 
 footer ul {
-	justify-content: flex-start;
+	justify-content: center;
 }
 
 footer ul li {
@@ -336,53 +358,108 @@ footer ul li {
 	font-size: 1.1em;
 }
 
- .wrapper {
+.wrapper {
+	width: 90%;
  	align-self: center;
- }
+}
 
- #menu {
+.padding {
+	padding: 10%;
+	border-top: 2px solid #2B2533;
+	border-bottom: 2px solid #2B2533;
+}
+
+#menu {
  	display: flex;
- 	position: initial;
+ 	margin-top: 0;
  }
 
- .bar, .menu-bg {
+.bar, .menu-bg {
     display: none;
-  }
+}
 
-  .navigation {
+.navigation {
     display: flex;
     justify-content: space-around;
     margin-left: 0;
-  }
+}
 
-  .burgerlink {
+.burgerlink {
     margin-right: 4%;
-  }
+}
 
-  .change-bg {
+.burgerlink a:hover {
+	color: #F1F1F1;
+	border-bottom: 2px solid #2B2533;
+}
+
+.change-bg {
     visibility: hidden;
-  }
+}
 
-  header h1 {
-  	margin-top: 8%;
-  	margin-right: 3%;
-  }
-
-  .btn {
+.btn {
   	min-width: 20%;
   	max-width: 20%;
   	padding: 2%;
-  }
+}
 
-  .item {
+.item {
   	padding-bottom: 5%;
-  }
+}
 
-  .contact h2 {
+.contact h2 {
   	padding-top: 5%;
-  }
+}
 
-  .hours {
+.hours {
   	min-width: 26%;
-  }
+}
+}
+
+@media screen and (min-width: 800px) {
+.wrapper {
+	width: 80%;
+}
+
+header h1 {
+	margin-top: 6%;
+}
+}
+
+@media screen and (min-width: 1024px) {
+body {
+	background: url(../images/background.jpg) no-repeat center center fixed;
+	background-size: cover;
+}
+
+.wrapper {
+	width: 70%;
+}
+
+header h1 {
+	margin-top: 5%;
+}
+
+header p {
+	margin-top: -1%;
+}
+
+footer p {
+	margin: 0.5%;
+}
+}
+
+@media screen and (min-width: 1400px) {
+body {
+	background: url(../images/lg_background.jpg) no-repeat center center fixed;
+	background-size: cover;
+}
+
+.wrapper {
+	width: 40%;
+}
+
+header h1 {
+	margin-top: 4%;
+}
 }
